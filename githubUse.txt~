@@ -1,0 +1,8 @@
+git init
+
+git status
+git add *
+git status
+git commit
+git push https://github.com/ta3densg/.h-version2 master
+

@@ -57,6 +57,15 @@ private:
     GeoRef georef;
     vector<PointPly> compose;
 public:
+    NuagePoint::NuagePoint();
+    NuagePoint::NuagePoint(int id, GeoRef georef, vector<PointPly> compose);
+    void NuagePoint::setId(int id);
+    int NuagePoint::getId();
+    void NuagePoint::setGeoRef(GeoRef georef);
+    GeoRef NuagePoint::getGeoRef();
+    void NuagePoint::setCompose(vector<PointPly> compose);
+    vector<PointPly> NuagePoint::getCompose();
+    NuagePoint::~NuagePoint();
     void creation_manuelle();
     void segmentation_auto();
     void re_estimation();
@@ -69,6 +78,15 @@ private:
     string chemin_etalonnage;
     string nom;
 public:
+    Photo::Photo();
+    Photo::Photo(string chemin_etalonnage, string nom);
+    void Photo::setCheminEtalonnage(string chemin_etalonnage);
+    string Photo::getCheminEtalonnage();
+    void Photo::setNom(string nom);
+    string Photo::getNom();
+    Photo::~Photo();
     void ajout_masque();
     void saisir_point_appui();
 };
+
+

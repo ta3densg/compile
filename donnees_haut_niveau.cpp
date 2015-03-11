@@ -51,14 +51,8 @@ GeoRef::~Georef(){
 }
 
 
-/*class Bande// class Bande fonction de manipulation
-{
-private:
-    int id;
-    float recouvrement;
-    vector<Photo> elts;
-};
-*/
+// class Bande fonction de manipulation
+
 Bande::Bande()
 {
 
@@ -100,5 +94,83 @@ vector<Photo> Bande::getElts()
 
 Bande::~Bande()
 {
-
 }
+
+
+//  class NuagePoint
+
+    NuagePoint::NuagePoint()
+    {
+
+    }
+    NuagePoint::NuagePoint(int id, GeoRef georef, vector<PointPly> compose)
+    {
+        NuagePoint.id=id;
+        NuagePoint.georef=georef;
+        NuagePoint.compose=compose;
+    }
+    void NuagePoint::setId(int id)
+    {
+        NuagePoint.id=id;
+    }
+    int NuagePoint::getId()
+    {
+        return NuagePoint.id;
+    }
+
+
+
+    void NuagePoint::setGeoRef(GeoRef georef)
+    {
+        NuagePoint.georef=georef;
+    }
+    GeoRef NuagePoint::getGeoRef()
+    {
+        return NuagePoint.georef;
+    }
+
+    void NuagePoint::setCompose(vector<PointPly> compose)
+    {
+        NuagePoint.compose=compose;
+    }
+    vector<PointPly> NuagePoint::getCompose()
+    {
+        return NuagePoint.compose;
+    }
+
+    NuagePoint::~NuagePoint()
+    {
+
+    }
+
+
+    // class Photo
+    /*
+class Photo
+    string chemin_etalonnage;
+    string nom;
+*/
+    Photo::Photo()
+    {}
+    Photo::Photo(string chemin_etalonnage, string nom)
+    {
+        Photo.chemin_etalonnage=chemin_etalonnage;
+        Photo.nom=nom;
+    }
+    void Photo::setCheminEtalonnage(string chemin_etalonnage)
+    {
+        Photo.chemin_etalonnage=chemin_etalonnage;
+    }
+    string Photo::getCheminEtalonnage()
+    {
+        return Photo.chemin_etalonnage;
+    }
+    void Photo::setNom(string nom)
+    {
+        Photo.nom=nom;
+    }
+    string Photo::getNom()
+    {
+        return Photo.nom;
+    }
+    Photo::~Photo(){}
